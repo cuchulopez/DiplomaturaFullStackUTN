@@ -1,0 +1,41 @@
+html{
+    box-sizing: border-box;
+}
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.principal{
+    background-image: url(../assets/img/playa.jpg);
+    height: 100vh;
+    background-position: top center;
+    background-size: cover;
+    padding: 5px 5px;
+    width: 100%;
+}
+
+h1.presentacion-sitio span{
+    position:relative;
+    text-shadow: 0 0 30px black;
+}
+
+h1.presentacion-sitio{
+    font-size: 3vw;
+    font-family: 'PT Sans', sans-serif;
+    margin: 10px;
+}
+
+p.mi-nombre {
+    text-transform: none!important;
+    font-family: 'PT Sans', sans-serif;
+    margin: 10px;
+}
+
+p.mi-nombre span {
+    font-weight: bold;
+}
