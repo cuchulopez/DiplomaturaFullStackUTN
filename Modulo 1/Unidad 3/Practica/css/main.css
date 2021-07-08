@@ -1,0 +1,34 @@
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.principal {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.presentacion {
+  background-image: url( ../img/photo.png );
+  background-repeat: no-repeat;
+  color: rgb(17, 35, 197);
+  height: 350px;
+  width: 400px;
+  
+  text-align: center;
+  
+}
+
+.formulario {
+  display: block;
+  width:510px;
+}
+
+.experiencia{
+  list-style-type:none;
+}
