@@ -1,0 +1,84 @@
+*,*:before,*:after {
+  box-sizing: inherit;
+}
+
+html {
+   
+  color: #222;
+  font-size: 62.5%;
+  line-height: 1.4;
+ 
+
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Ubuntu','Open Sans', sans-serif;
+    margin: 5px 100px;
+}
+
+h1,h3,h4 {
+  font-family: 'Ubuntu', sans-serif;
+}
+li, p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+table {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.principal {
+  margin: 0 auto;
+  width: 98%;
+}
+
+.presentacion {
+  background-image: url( ../img/photo.png );
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: rgb(179, 149, 248);
+  filter: grayscale(100%);
+  font-size: 1.6rem;
+  text-align: center;
+  transition: filter 1s ease-in-out;
+
+  height: 300px;
+  width: 400px;
+}
+.presentacion:hover{
+  filter: grayscale(0%);
+}
+.datos_personales{
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+
+.datos_personales ul {
+  list-style: none;
+}
+
+.experiencia {
+  font-size: 1.6rem;
+}
+
+.experiencia p {
+  font-size: 1.2rem;
+}
+
+.formulario {
+  display: block;
+  width:50vw;
+}
