@@ -1,0 +1,30 @@
+.contenedor {
+    align-items: center;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+
+    height: 600px;
+    width: 600px;
+}
+.cuadrado1,.cuadrado2,.cuadrado3{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+    height: 200px;
+    width: 200px;
+}
+
+.cuadrado1{
+    background-color: red;
+}
+.cuadrado2{
+    background-color: blue;
+}
+.cuadrado3{
+    background-color: green;
+}
