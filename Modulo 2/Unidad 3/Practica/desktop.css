@@ -1,0 +1,48 @@
+body {
+    background: #332F29;
+}
+
+.contenedor{
+    background-color: beige;
+    height: calc(100vh - 20px);
+    max-width: 1000px;
+    padding: 10px 40px 0 40px;
+}
+
+.header-sitio{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav {
+    padding: 0;
+}
+
+nav a:nth-child(2),nav a:nth-child(3) {
+    border-left: 1px solid white;
+}
+
+.contenedor-ppal {
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.seccion{
+    flex: 0 1 70%;
+    margin-right: 20px;
+    order:unset;
+}
+aside {
+    flex: 1;
+}
+
+.elementos {
+    display: flex;
+}
+
+aside h3 {
+    margin: 20px 0;
+}
+.elemento h3 {
+    margin: 20px 0;
+}
