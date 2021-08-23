@@ -1,8 +1,13 @@
 .container{
     background-color: white;
     max-width: 1000px;
-    padding: 20px 40px;
+    padding: 70px 20px;
 }
+
+a {
+    text-decoration: none;
+}
+  
 
 #header i {
     font-size: 30px;  
@@ -69,12 +74,108 @@
 # Sección Servicios 
 --------------------------------------------------------------*/
 .servicios {
-    padding-top: 60px;
-    height: 700px;
+    /* padding-top: 60px; */
+    height: 600px;
 }
 
 .icono i {
     font-size: 20px;
     color: #67b0d1;
     margin-bottom: 10px;
+  }
+
+/*--------------------------------------------------------------
+# Contacto
+--------------------------------------------------------------*/
+.mapa {
+  height: 100%;
+}
+
+.contacto .formulario {
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 20px;
+  background: #fff;
+}
+
+.contacto .formulario input, .contacto .formulario textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contacto .formulario input::focus, .contacto .formulario textarea::focus {
+  background-color: #67b0d1;
+}
+
+.contacto .formulario input {
+  padding: 10px 15px;
+}
+
+.contacto .formulario textarea {
+  padding: 12px 15px;
+}
+
+button {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.contacto .formulario button[type="submit"] {
+  background: #67b0d1;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.contacto .formulario button[type="submit"]:hover {
+  background: #8ec4dd;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer {
+  display: flex;
+  height: 200px;
+}
+
+.footer {
+  justify-content: center;
+  align-items: center;
+
+}
+
+/*--------------------------------------------------------------
+# Botón para volver arriba
+--------------------------------------------------------------*/
+
+  .back-to-top {
+    position: fixed;
+    visibility: visible;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 998;
+    background: #67b0d1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+  }
+  
+  .back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+  }
+  
+  .back-to-top:hover {
+    background: #86c0da;
+    color: #fff;
+  }
+  
+  .back-to-top.active {
+    visibility: visible;
+    opacity: 1;
   }
