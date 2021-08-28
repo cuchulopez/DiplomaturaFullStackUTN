@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.titulo {
+    display: flex;
+    align-items: flex-end;
+}
+h4 {
+    padding-left: 20px;
+}
+
+nav.solapas {
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    width: 100%;
+}
+
+nav.solapas a {
+    text-decoration: none;
+    color: black;   
+    cursor: pointer;
+    margin-bottom: -1px;
+    padding: 10px 40px;
+}
+
+.secciones-ejer, .resultados {
+
+    background-color: #636363;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    margin: 20px auto;
+
+    height: 50px;
+    width: 45%;
+}
+
+.secciones-ejer section, .resultados {
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.solapa-activa{
+    border: 1px solid gray;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid white;
+}
+
+/* ***************** TECLADO *************** */
+form {
+    width: 390px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 10px 25px;
+    text-align: center;
+    /* box-shadow: 0px 5px 5px -0px rgba(0, 0, 0, 0.3); */
+    border-radius: 5px;
+  }
+  
+  input[type="number"] {
+    padding: 0 40px;
+    border-radius: 5px;
+    width: 350px;
+    margin: auto;
+    border: 1px solid rgb(228, 220, 220);
+    outline: none;
+    font-size: 30px;
+    color: transparent;
+    text-shadow: 0 0 0 rgb(71, 71, 71);
+    text-align: center;
+    -moz-appearance: textfield;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  .boton {
+    border: none;
+    background: none;
+    font-size: 1.5em;
+    border-radius: 50%;
+    height: 60px;
+    font-weight: 550;
+    width: 60px;
+    color: transparent;
+    text-shadow: 0 0 0 rgb(102, 101, 101);
+    margin: 7px 20px;
+  }
+  
+  .borrar,
+  .aceptar {
+    font-size: 1em !important;
+  }
+  
+  .boton:hover {
+    box-shadow: #506ce8 0 0 1px 1px;
+  }
+  .boton:active {
+    background: #506ce8;
+    color: #fff;
+  }
+  
+  .borrar:hover {
+    box-shadow: #ff3c41 0 0 1px 1px;
+  }
+  
+  .borrar:active {
+    background: #ff3c41;
+    color: #fff;
+  }
+  
+  .aceptar:hover {
+    box-shadow: #47cf73 0 0 1px 1px;
+  }
+  
+  .aceptar:active {
+    background: #47cf73;
+    color: #fff;
+  }
+
+  
+  /* ***************** FIN TECLADO *************** */
