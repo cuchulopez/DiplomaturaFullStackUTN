@@ -1,23 +1,29 @@
 // $('nav.solapas a:first').addClass('solapa-activa');
 // $('.secciones-ejer section').hide();
 let solapaActiva = '';
+let listaNumeros = [];
 
 $('.secciones-ejer').hide();
 $('.caja_numero').hide();
 $('.teclado').hide();
-$('.resultados').hide();
+$('.listas').hide();
+$('.verficar-ej2').hide();
+$('.resultado-ej2').hide();
 // $('.secciones-ejer section:first').show();
 
 $('nav.solapas a').click(function(){
+    $('.resultado-ej2').hide();
+    $('.verficar-ej2').hide();
+
     $('.secciones-ejer').show();
     $('.secciones-ejer section').hide();
-    $('.resultados').hide();
+    $('.listas').hide();
     
     $('nav.solapas a').removeClass('solapa-activa');
     $(this).addClass('solapa-activa');
 
     input_value.val('');
-    document.getElementById('resultado').innerHTML='';
+    document.getElementById('lista').innerHTML='';
         
     solapaActiva = $(this).attr('href');
     $(solapaActiva).show();
@@ -78,9 +84,39 @@ $("#aceptar").click(function () {
 
     } else 
     if (solapaActiva == '#ej2'){
-        $('.resultados').show();
-        document.getElementById('resultado').innerHTML='Ejercicio 2: ' + input_value.val();
+        $('.resultados p').removeClass();
+        // let numMayor = -1;
+        if(input_value.val()!=''){
+            listaNumeros.push(parseInt(input_value.val(),10));
+            $('.listas').show();
+            if (listaNumeros.length > 1){
+                $('.verficar-ej2').show();
+            } else {
+                $('.resultado-ej2').hide();
+                $('.verficar-ej2').hide();
+            }
+        }
+        document.getElementById('lista').innerHTML='Lista: ' + listaNumeros;
+        input_value.val('');
     }
+    
     return false;
+});
+
+$("#buscar-mayor").click(function () {
+    $('.resultado-ej2').show();
+    let numMayor = listaNumeros[0];
+    // console.log(listaNumeros);
+    
+    for (let i = 1; i < listaNumeros.length; i++){
+        // console.log(numMayor);
+        if (listaNumeros[i] > numMayor){
+            numMayor = listaNumeros[i];
+
+        }
+    }
+    
+    document.getElementById('resultado-ej2-p').innerHTML='El mayor es: ' + numMayor;
+    listaNumeros.length = 0;
 });
 

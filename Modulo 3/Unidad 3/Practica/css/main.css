@@ -30,19 +30,26 @@ nav.solapas a {
     padding: 10px 40px;
 }
 
-.secciones-ejer, .resultados {
+.secciones-ejer, .listas, .resultado-ej2 {
 
     background-color: #636363;
     border-radius: 5px;
     color: #fff;
     font-weight: bold;
-    margin: 20px auto;
+    margin: 15px auto;
 
     height: 50px;
     width: 45%;
 }
 
-.secciones-ejer section, .resultados {
+.verficar-ej2 {
+  display: block;
+  margin: 5px auto;
+  height: 70px;
+  width: 70px;
+}
+
+.secciones-ejer section, .listas, .resultado-ej2 {
     font-size: 20px;
     padding-top: 10px;
     text-align: center;
@@ -127,5 +134,12 @@ form {
     color: #fff;
   }
 
-  
+  .verificar:hover {
+    box-shadow: #3d55ff 0 0 1px 1px;
+  }
+
+  .verificar:active {
+    background-color: #3d55ff;
+    color:#fff
+  }
   /* ***************** FIN TECLADO *************** */
