@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+    padding-left: 30px;
+}
+
+.contenedor {
+    margin: 60px auto 0;
+
+    height: 93vh;
+    width: 90vw;
+    /* background-color: violet; */
+    
+}
+
+.titulo_ejer {
+    padding: 20px 0;
+}
+
+.cuadrados {
+    background: rgba(255, 255, 255, .3);
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+.cuadrado {
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+}
+
+.cuadrado_verde {
+    background-color:  #DAF7A6 ;
+}
+.cuadrado_azul {
+    background-color: #71cbfe;
+}
+.cuadrado_rojo {
+    background-color: #fe7a71 ;
+}
+
+.fondo_verde {
+    background-color: green;
+}
+.fondo_azul {
+    background-color: blue;
+}
+.fondo_rojo {
+    background-color: red;
+}
+.transparencia {
+    opacity: .5;
+}
+
+div.caja-texto{
+    margin: 0 auto;
+    width: 50%;
+}
+#texto {
+    border: 1px solid #eeeeee;
+    overflow: hidden;
+    padding: 0rem .3rem;
+    resize: none;
+
+    height: 5rem;
+    width: 100%;
+}
+.cont-y-boton{
+    display: flex;
+    justify-content: space-between;
+}
+.contador {
+    padding-top: 1rem;
+}
+button.borrar {
+    margin-top: .5rem ;
+    
+}
+
+.tabla-registro {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+input {
+    text-indent: .7rem;
+}
+
+input#alumno{
+    margin-right: 1rem;
+    width: 30rem;
+}
+
+input#nota{
+    width: 5rem;
+}
+
+span.aceptar{
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.lista-alumnos, .alumnos-aprobados{
+    margin-top: 1.5rem;
+    width: 40rem;
+}
+
+.ejercicio3 h6 {
+    border-top: 1px solid #4d4c4c;
+    font-weight: bold;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
