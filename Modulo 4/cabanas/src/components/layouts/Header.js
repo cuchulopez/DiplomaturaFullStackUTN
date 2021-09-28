@@ -5,11 +5,11 @@ import {
     Route
 } from 'react-router-dom';
 import { Navbar } from './Navbar';
-import { Home } from '../sections/Home';
-import { Imagenes } from '../sections/Imagenes';
-import { Servicios } from '../sections/Servicios';
-import { Precios } from '../sections/Precios';
-import { Contacto } from '../sections/Contacto';
+import { Home } from '../pages/Home';
+import { Imagenes } from '../pages/Imagenes';
+import { Servicios } from '../pages/Servicios';
+import { Precios } from '../pages/Precios';
+import { Contacto } from '../pages/Contacto';
 
 export const Header = () => {
     return (
