@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   return (
+    <header id="header" className = "header" >
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
@@ -76,18 +77,21 @@ export const Navbar = () => {
           </span>
         </div>
       </div>
-      {/* <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <div className="navbar-collapse collapse order-3 dual-collapse2">
                 <ul className="navbar-nav ml-auto">
+                  <li className="nav-item">
                     <NavLink 
                         activeClassName="active"
-                        className="nav-item nav-link" 
+                        className="nav-link" 
                         exact
                         to="/login"
                     >
-                        Logout
+                        Login
                     </NavLink>
+                  </li>
                 </ul>
-            </div> */}
+            </div>
     </nav>
+    </header>
   );
 };
