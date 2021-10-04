@@ -1,0 +1,18 @@
+<div id="alumnos">
+  <table >
+    <thead data-aos="zoom-out-up" data-aos-delay="100">
+      <th>Nombre de alumno</th>
+      <th>Nota</th>
+    </thead>
+    <tbody data-aos="zoom-out-up" data-aos-delay="500">
+      {{#each alumnos}}
+        <tr >
+          <td >{{nombre}}</td>
+          <td >{{nota}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<a href="/" data-aos="fade-up">Volver</a>
