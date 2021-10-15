@@ -1,0 +1,15 @@
+
+{{#if usuario}}
+    <h4>
+        Usted se a logueado como administrador del sitio
+    </h4>
+{{/if}}
+
+{{#unless usuario}}
+    <h4>Ingrese usuario y contraseña</h4>
+    <form action="/login" method="post">
+        <input type="text" name="usuario" id="usuario">
+        <input type="password" name="password" id="password">
+        <button class="btn btn-outline-dark">Aceptar</button>
+    </form>
+{{/unless}}
