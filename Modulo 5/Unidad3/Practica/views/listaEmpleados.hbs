@@ -1,0 +1,31 @@
+<div id="alumnos">
+  <table >
+    <thead data-aos="zoom-out-up" data-aos-delay="100">
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Puesto</th>
+      <th>Salario</th>
+      <th>Mail</th>
+    </thead>
+    <tbody data-aos="zoom-out-up" data-aos-delay="500">
+      {{#each empleados }}
+        <tr >
+          <td >{{nombre}}</td>
+          <td >{{apellido}}</td>
+          <td >{{puesto}}</td>
+          <td >{{salario}}</td>
+          <td >{{mail}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+
+  {{!-- <ul>
+    {{#each alumnos}}
+    <li>{{nombre}} {{nota}} </li>
+    {{/each}}
+  </ul> --}}
+</div>
+
+<a href="/" data-aos="fade-up" data-aos-delay="1000">Volver</a>
