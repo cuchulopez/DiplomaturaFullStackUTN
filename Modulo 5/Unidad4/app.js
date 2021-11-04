@@ -31,10 +31,22 @@ app.use(sessions({
   saveUninitialized: true
 }));
 
+privada = async (req, res, next) => {
+  try{
+    if(req.session.id_usr){
+      next();
+    } else {
+      res.redirect('/login');
+    }
+  }catch(e){
+    console.log(e);
+  }
+};
+
 app.use('/', indexRouter);
 app.use('/servicios', serviciosRouter);
 app.use('/imagenes', imagenesRouter);
-app.use('/admin', adminRouter);
+app.use('/admin', privada, adminRouter);
 app.use('/login', loginRouter);
 
 app.get('/logout', function(req, res){
