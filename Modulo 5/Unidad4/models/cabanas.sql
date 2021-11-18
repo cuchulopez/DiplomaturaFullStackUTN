@@ -8,6 +8,17 @@
 CREATE DATABASE IF NOT EXISTS `cabanas` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `cabanas`;
 
+CREATE TABLE IF NOT EXISTS `servicios` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(50) NOT NULL,
+  `descripcion` varchar(300) NOT NULL,
+  `icono` varchar(10) NOT NULL,
+  KEY `Índice 1` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/*!40000 ALTER TABLE `servicios` DISABLE KEYS */;
+/*!40000 ALTER TABLE `servicios` ENABLE KEYS */;
+
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id_usr` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
   `user` varchar(50) NOT NULL DEFAULT '',
