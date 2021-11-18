@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>Agregar un servicio</h4>
+            <form action="/admin/servicios/agregar" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Titulo" name="titulo">
+                </div>
+                <div class="form-group">
+                    <textarea type="text" class="form-group" placeholder="Descripción" name="descripcion"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary"> Agregar </button>
+            </form>
+
+        </div>
+        {{#if error}}
+            <h5>{{message}}</h5>
+        {{/if}}
+    </div>
+
+</div>
