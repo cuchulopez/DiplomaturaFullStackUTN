@@ -11,3 +11,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   height: 100%;
 }
+
+.tabla {
+  margin-top: 10px;  
+}

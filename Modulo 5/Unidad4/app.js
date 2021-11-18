@@ -10,8 +10,10 @@ require('dotenv').config();
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var serviciosRouter = require('./routes/servicios');
+var preciosRouter = require('./routes/precios');
 var imagenesRouter = require('./routes/imagenes');
-var adminRouter = require('./routes/admin');
+var adminRouter = require('./routes/admin/admin');
+var serviciosAdminRouter = require('./routes/admin/servicios');
 
 var app = express();
 
@@ -46,7 +48,9 @@ privada = async (req, res, next) => {
 app.use('/', indexRouter);
 app.use('/servicios', serviciosRouter);
 app.use('/imagenes', imagenesRouter);
-app.use('/admin', privada, adminRouter);
+app.use('/precios', preciosRouter);
+app.use('/admin/admin', privada, adminRouter);
+app.use('/admin/servicios', privada, serviciosAdminRouter);
 app.use('/login', loginRouter);
 
 app.get('/logout', function(req, res){

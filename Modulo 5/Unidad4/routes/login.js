@@ -23,7 +23,7 @@ router.post('/', async (req, res,next) => {
       // console.log("Req ", req.session.user);
       // console.log("Req ", Boolean(req.session.user));
 
-      res.redirect('/admin');
+      res.redirect('/admin/admin');
     } else {
       res.render('login',{
         error: true
