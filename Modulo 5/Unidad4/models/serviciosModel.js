@@ -19,4 +19,29 @@ async function insertServicios(obj) {
     }
 }
 
-module.exports = { getServicios, insertServicios }
+async function getServicioById(id) {
+    let query = 'select * from servicios where id = ?';
+    let rows = await pool.query(query, [id]);
+
+    return rows[0];
+}
+
+async function modifServicioById (obj,id){
+    try {
+        let query = 'update servicios set ? where id = ?';
+        let rows = await pool.query(query,[obj, id]);
+
+        return rows;
+    } catch(e){
+        throw e;
+    }
+}
+
+async function deleteServicioById(id) {
+    let query = 'delete from servicios where id = ?';
+    let rows = await pool.query(query, [id]);
+
+    return rows;
+}
+
+module.exports = { getServicios, insertServicios, getServicioById, modifServicioById, deleteServicioById }
