@@ -41,15 +41,10 @@ router.get('/modificar/:id', async(req, res, next) => {
 
 router.post('/agregar', async (req, res, next) => {
     try {
-        // console.log('BANDERA1');
         if (req.body.titulo != '' && req.body.descripcion != ''){
+                        
             await serviciosModel.insertServicios(req.body);
             res.redirect('/admin/servicios');
-            // res.render('admin/servicios', {
-            //     layout:'admin/layout',
-            //     login: Boolean(req.session.user),
-            //     usuario: req.session.user,
-            // });
 
         } else {
             res.render('admin/agregar', {
@@ -76,7 +71,8 @@ router.post('/modificar', async (req, res, next) => {
     try {
         let obj = {
             titulo: req.body.titulo,
-            descripcion: req.body.descripcion
+            descripcion: req.body.descripcion,
+            icono: req.body.icono
         }
         await serviciosModel.modifServicioById(obj,req.body.id);
         res.redirect('/admin/servicios');

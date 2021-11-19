@@ -12,6 +12,22 @@ body {
   height: 100%;
 }
 
+.container{
+  background-color: white;
+  max-width: 1000px;
+  padding: 60px 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.servicio i {
+  font-size: 20px;
+  color: #67b0d1;
+  margin-bottom: 10px;
+}
+
 .tabla {
   margin-top: 10px;  
 }

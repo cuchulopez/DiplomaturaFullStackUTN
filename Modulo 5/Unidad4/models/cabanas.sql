@@ -1,3 +1,10 @@
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Versión del servidor:         10.6.5-MariaDB-1:10.6.5+maria~focal - mariadb.org binary distribution
+-- SO del servidor:              debian-linux-gnu
+-- HeidiSQL Versión:             11.3.0.6295
+-- --------------------------------------------------------
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
@@ -5,32 +12,11 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE DATABASE IF NOT EXISTS `cabanas` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `cabanas`;
+-- La exportación de datos fue deseleccionada.
 
-CREATE TABLE IF NOT EXISTS `servicios` (
-  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(50) NOT NULL,
-  `descripcion` varchar(300) NOT NULL,
-  `icono` varchar(10) NOT NULL,
-  KEY `Índice 1` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- La exportación de datos fue deseleccionada.
 
-/*!40000 ALTER TABLE `servicios` DISABLE KEYS */;
-/*!40000 ALTER TABLE `servicios` ENABLE KEYS */;
-
-CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id_usr` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-  `user` varchar(50) NOT NULL DEFAULT '',
-  `password` varchar(50) NOT NULL DEFAULT '',
-  `isAdmin` char(1) NOT NULL DEFAULT '0',
-  KEY `Índice 1` (`id_usr`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
-
-/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` (`id_usr`, `user`, `password`, `isAdmin`) VALUES
-	(1, 'admin', '81dc9bdb52d04dc20036dbd8313ed055', 'S');
-/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+-- La exportación de datos fue deseleccionada.
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
