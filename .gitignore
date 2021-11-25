@@ -27,25 +27,3 @@ Modulo 5/Unidad4/node_modules
 ProyectoFinal/backend/.env
 ProyectoFinal/backend/node_modules/
 
-# dependencies
-ProyectoFinal/frontend/node_modules
-ProyectoFinal/frontend/.pnp
-ProyectoFinal/frontend/.pnp.js
-
-# testing
-ProyectoFinal/frontend/coverage
-
-# production
-
-ProyectoFinal/frontend/build
-
-# misc
-ProyectoFinal/frontend/.DS_Store
-ProyectoFinal/frontend/.env.local
-ProyectoFinal/frontend/.env.development.local
-ProyectoFinal/frontend/.env.test.local
-ProyectoFinal/frontend/.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
