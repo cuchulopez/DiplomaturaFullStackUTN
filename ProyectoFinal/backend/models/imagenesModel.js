@@ -7,6 +7,13 @@ async function getImagenes(){
     return rows;
 }
 
+async function getImagenById(id) {
+    let query = 'select * from imagenes where id = ?';
+    let rows = await pool.query(query, [id]);
+
+    return rows[0];
+}
+
 async function insertImagen(obj) {
     try {
         let query = "insert into imagenes set ?";
@@ -26,4 +33,4 @@ async function deleteImagenById(id) {
     return rows;
 }
 
-module.exports = { getImagenes, insertImagen, deleteImagenById }
+module.exports = { getImagenes, getImagenById, insertImagen, deleteImagenById }

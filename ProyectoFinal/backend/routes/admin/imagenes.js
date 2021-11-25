@@ -6,6 +6,9 @@ let util = require('util');
 let cloudinary = require('cloudinary').v2;
 
 const uploader = util.promisify(cloudinary.uploader.upload);
+const destroy = util.promisify(cloudinary.uploader.destroy);
+
+
 
 router.get('/', async function(req, res, next){
     let imagenes = await imagenesModel.getImagenes();
@@ -34,20 +37,29 @@ router.get('/eliminar/:id', async(req, res, next) => {
 
 router.get('/modificar/:id', async(req, res, next) => {
     let id = req.params.id;
-    let servicio = await serviciosModel.getServicioById(id);
+    let imagen = await imagenesModel.getImagenById(id);
     
-    res.render('admin/modificarServ',{
+    // if( imagen.imagen_id ) {
+        const img_cloud = cloudinary.image(imagen.imagen_id, {
+            width: 100,
+            height: 100,
+            crop: 'fill'
+        });
+        
+    // } 
+    res.render('admin/modificarImg',{
         layout:'admin/layout',
         login: Boolean(req.session.user),
         usuario: req.session.user,
-        servicio
+        imagen,
+        img_cloud
     });
 });
 
 router.post('/agregar', async (req, res, next) => {
     try {
-        let img_id = '';
-        if (req.body.descripcion != ''){
+
+        if (req.files.imagen_id != '' && req.body.descripcion != ''){
             imagen = req.files.imagen_id;
             imagen_id = (await uploader(imagen.tempFilePath)).public_id;
 
@@ -68,7 +80,6 @@ router.post('/agregar', async (req, res, next) => {
         }
     }catch (e){
         console.log(e);
-        console.log('Bandera');
         res.render('admin/agregarImg', {
             layout:'admin/layout',
             login: Boolean(req.session.user),
@@ -81,12 +92,14 @@ router.post('/agregar', async (req, res, next) => {
 
 router.post('/modificar', async (req, res, next) => {
     try {
-        let obj = {
-            titulo: req.body.titulo,
-            descripcion: req.body.descripcion,
-            icono: req.body.icono
+        let img_id = req.body.imagen_original;
+        
+        if( req.files ){
+            img = req.files.imagen_nueva;
+            img_id = (await uploader(img.tempFilePath)).public_id;
         }
-        await serviciosModel.modifServicioById(obj,req.body.id);
+        
+        //await serviciosModel.modifServicioById(obj,req.body.id);
         res.redirect('/admin/servicios');
     } catch (e){
         console.log(e);
