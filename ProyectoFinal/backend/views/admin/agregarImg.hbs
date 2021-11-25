@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>Agregar una imagen</h4>
+            <form action="/admin/imagenes/agregar" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Descripcion" name="descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label>Imagen: </label><input type="file" class="form-control" id="imagen_id" name="imagen_id" required>
+                </div>
+                <button type="submit" class="btn btn-primary"> Agregar </button>
+            </form>
+
+        </div>
+        {{#if error}}
+            <h5>{{message}}</h5>
+        {{/if}}
+    </div>
+
+</div>

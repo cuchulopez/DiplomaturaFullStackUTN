@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+  font-family: "Ubuntu", sans-serif;
+  height: 100%;
+}
+
+.container{
+  background-color: white;
+  max-width: 1000px;
+  padding: 60px 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.servicio i {
+  font-size: 20px;
+  color: #67b0d1;
+  margin-bottom: 10px;
+}
+
+.tabla {
+  margin-top: 10px;  
+}
