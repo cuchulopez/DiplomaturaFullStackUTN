@@ -92,18 +92,23 @@ router.post('/agregar', async (req, res, next) => {
 
 router.post('/modificar', async (req, res, next) => {
     try {
-        let img_id = req.body.imagen_original;
         
         if( req.files ){
             img = req.files.imagen_nueva;
-            img_id = (await uploader(img.tempFilePath)).public_id;
+            imagen_id = (await uploader(img.tempFilePath)).public_id;
+            await (destroy(req.body.img_original));
         }
         
-        //await serviciosModel.modifServicioById(obj,req.body.id);
-        res.redirect('/admin/servicios');
+        let obj = {
+            descripcion: req.body.descripcion,
+            imagen_id
+        }
+
+        await imagenesModel.modifImagenById(obj,req.body.id);
+        res.redirect('/admin/imagenes');
     } catch (e){
         console.log(e);
-        res.render('admin/modificarServ',{
+        res.render('admin/modificarImg',{
             layout:'admin/layout',
             login: Boolean(req.session.user),
             usuario: req.session.user,

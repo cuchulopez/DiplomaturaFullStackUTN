@@ -26,6 +26,17 @@ async function insertImagen(obj) {
     }
 }
 
+async function modifImagenById (obj,id){
+    try {
+        let query = 'update imagenes set ? where id = ?';
+        let rows = await pool.query(query,[obj, id]);
+
+        return rows;
+    } catch(e){
+        throw e;
+    }
+}
+
 async function deleteImagenById(id) {
     let query = 'delete from imagenes where id = ?';
     let rows = await pool.query(query, [id]);
@@ -33,4 +44,4 @@ async function deleteImagenById(id) {
     return rows;
 }
 
-module.exports = { getImagenes, getImagenById, insertImagen, deleteImagenById }
+module.exports = { getImagenes, getImagenById, insertImagen, modifImagenById, deleteImagenById }

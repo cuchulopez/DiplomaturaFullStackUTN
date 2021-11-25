@@ -28,7 +28,7 @@ ProyectoFinal/backend/.env
 ProyectoFinal/backend/node_modules/
 
 # dependencies
-/ProyectoFinal/frontend/node_modules
+ProyectoFinal/frontend/node_modules
 ProyectoFinal/frontend/.pnp
 ProyectoFinal/frontend/.pnp.js
 
