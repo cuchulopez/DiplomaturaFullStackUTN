@@ -39,14 +39,12 @@ router.get('/modificar/:id', async(req, res, next) => {
     let id = req.params.id;
     let imagen = await imagenesModel.getImagenById(id);
     
-    // if( imagen.imagen_id ) {
-        const img_cloud = cloudinary.image(imagen.imagen_id, {
+    const img_cloud = cloudinary.image(imagen.imagen_id, {
             width: 100,
             height: 100,
             crop: 'fill'
-        });
+    });
         
-    // } 
     res.render('admin/modificarImg',{
         layout:'admin/layout',
         login: Boolean(req.session.user),
