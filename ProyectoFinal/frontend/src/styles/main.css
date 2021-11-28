@@ -7,11 +7,11 @@
 }
 body {
     height: 100%;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .principal {
     background-color: white;
-    font-family: 'Ubuntu', sans-serif;
     display: flex;
     flex-direction: column;
 }
