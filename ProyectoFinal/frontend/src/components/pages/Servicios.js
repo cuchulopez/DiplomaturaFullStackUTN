@@ -22,20 +22,19 @@ export const Servicios = (props) => {
 
     return (
         <div className="contenido">
-            <h1>Servicios</h1>
             
-            <div class="row">
-                <div class="content col-xl-5 d-flex align-items-stretch">
-                    <div class="content">
+            <div className="row">
+                <div className="content col-xl-5 d-flex align-items-stretch">
+                    <div className="content">
                         <h3>Nuestros servicios</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
                         </p>
                     </div>
                 </div>
-                <div class="col-xl-7 d-flex align-items-stretch">
-                    <div class="servicio d-flex flex-column justify-content-center">
-                        <div class="row">
+                <div className="col-xl-7 d-flex align-items-stretch">
+                    <div className="servicio d-flex flex-column justify-content-center">
+                        <div className="row">
 
                             { loading ? (
                                 <p>Cargando ... </p>

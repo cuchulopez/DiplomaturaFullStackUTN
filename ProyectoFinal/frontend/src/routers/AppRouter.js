@@ -11,7 +11,7 @@ import { Imagenes } from '../components/pages/Imagenes';
 import { Servicios } from '../components/pages/Servicios';
 import { Precios } from '../components/pages/Precios';
 import { Contacto } from '../components/pages/Contacto';
-import { Login } from '../components/pages/Login';
+// import { Login } from '../components/pages/Login';
 
 export const AppRouter = () => {
     return (
@@ -22,7 +22,7 @@ export const AppRouter = () => {
                     <Route exact path="/imagenes" component={ Imagenes } />
                     <Route exact path="/precios" component={ Precios } />
                     <Route exact path="/contacto" component={ Contacto } />
-                    <Route exact path="/login" component={ Login } />
+                    {/* <Route exact path="/login" component={ Login } /> */}
                     <Route exact path="/" component={ Home } />
                 </Switch>
         </Router>

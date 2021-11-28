@@ -22,9 +22,9 @@ export const Imagenes = () => {
         <div className="contenido">
             <h1>Imagenes</h1>
 
-            <div class="col-xl-12 d-flex align-items-stretch">
-                <div class="imagenes d-flex flex-column justify-content-center">
-                    <div class="row">
+            <div className="col-xl-12 d-flex align-items-stretch">
+                <div className="imagenes d-flex flex-column justify-content-center">
+                    <div className="row">
 
                     { loading ? (
                                 <p>Cargando ... </p>

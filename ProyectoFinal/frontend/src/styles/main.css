@@ -10,7 +10,7 @@ body {
 }
 
 .App {
-    background-color: aliceblue;
+    background-color: white;
     font-family: 'Ubuntu', sans-serif;
     display: flex;
     flex-direction: column;
@@ -94,12 +94,8 @@ a {
 /*--------------------------------------------------------------
 # Sección Servicios 
 --------------------------------------------------------------*/
-.servicios {
-    /* padding-top: 60px; */
-    height: 600px;
-}
 
-.icono i {
+.servicio i {
     font-size: 20px;
     color: #67b0d1;
     margin-bottom: 10px;
@@ -170,36 +166,3 @@ footer {
 
 }
 
-/*--------------------------------------------------------------
-# Botón para volver arriba
---------------------------------------------------------------*/
-
-  .back-to-top {
-    position: fixed;
-    visibility: visible;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 998;
-    background: #67b0d1;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    transition: all 0.4s;
-  }
-  
-  .back-to-top i {
-    font-size: 24px;
-    color: #fff;
-    line-height: 0;
-  }
-  
-  .back-to-top:hover {
-    background: #86c0da;
-    color: #fff;
-  }
-  
-  .back-to-top.active {
-    visibility: visible;
-    opacity: 1;
-  }

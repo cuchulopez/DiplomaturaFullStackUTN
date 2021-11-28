@@ -77,7 +77,7 @@ export const Navbar = () => {
           </span>
         </div>
       </div>
-      <div className="navbar-collapse collapse order-3 dual-collapse2">
+      {/* <div className="navbar-collapse collapse order-3 dual-collapse2">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <NavLink 
@@ -90,7 +90,7 @@ export const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-      </div>
+      </div> */}
     </nav>
     </header>
   );

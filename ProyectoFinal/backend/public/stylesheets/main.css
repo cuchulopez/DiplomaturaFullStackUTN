@@ -13,8 +13,8 @@ body {
 }
 
 .container{
+  font-family: 'Ubuntu', sans-serif;
   background-color: white;
-  max-width: 1000px;
   padding: 20px 20px;
 }
 

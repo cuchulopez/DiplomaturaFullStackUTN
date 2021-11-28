@@ -5,8 +5,8 @@ export const ServicioItem = (props) => {
     const {title, description, icon} = props;
     
     return (
-        <div class="col-md-6" >
-            <i class={icon}></i>
+        <div className="col-md-6" >
+            <i className={icon}></i>
             <h4>{title}</h4>
             <p>{description}</p>
         </div>
