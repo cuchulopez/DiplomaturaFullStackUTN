@@ -31,6 +31,10 @@ router.get('/agregar',(req, res, next) => {
 
 router.get('/eliminar/:id', async(req, res, next) => {
     let id = req.params.id;
+
+    let imagen = await imagenesModel.getImagenById(id);
+    console.log(imagen.imagen_id);
+    await (destroy(imagen.imagen_id));
     await imagenesModel.deleteImagenById(id);
     res.redirect('/admin/imagenes');
 });
@@ -59,7 +63,9 @@ router.post('/agregar', async (req, res, next) => {
 
         if (req.files.imagen_id != '' && req.body.descripcion != ''){
             imagen = req.files.imagen_id;
-            imagen_id = (await uploader(imagen.tempFilePath)).public_id;
+            imagen_id = (await uploader(imagen.tempFilePath, {
+                tags: req.body.descripcion
+            })).public_id;
 
             await imagenesModel.insertImagen({
                 ...req.body,
@@ -93,7 +99,9 @@ router.post('/modificar', async (req, res, next) => {
         
         if( req.files ){
             img = req.files.imagen_nueva;
-            imagen_id = (await uploader(img.tempFilePath)).public_id;
+            imagen_id = (await uploader(img.tempFilePath, {
+                tags: req.body.descripcion
+            })).public_id;
             await (destroy(req.body.img_original));
         }
         

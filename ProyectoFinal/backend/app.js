@@ -5,7 +5,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var fileUpload = require('express-fileupload');
-
+var cors = require('cors');
 
 require('dotenv').config();
 
@@ -17,6 +17,7 @@ var imagenesRouter = require('./routes/imagenes');
 var adminRouter = require('./routes/admin/admin');
 var serviciosAdminRouter = require('./routes/admin/servicios');
 var imagenesAdminRouter = require('./routes/admin/imagenes');
+var apiRouter = require('./routes/api');
 
 var app = express();
 
@@ -61,6 +62,8 @@ app.use('/admin/admin', privada, adminRouter);
 app.use('/admin/servicios', privada, serviciosAdminRouter);
 app.use('/admin/imagenes', privada, imagenesAdminRouter);
 app.use('/login', loginRouter);
+
+app.use('/api', cors(), apiRouter);
 
 app.get('/logout', function(req, res){
   req.session.destroy();

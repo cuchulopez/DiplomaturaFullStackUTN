@@ -41,6 +41,9 @@ router.get('/modificar/:id', async(req, res, next) => {
 
 router.post('/agregar', async (req, res, next) => {
     try {
+        if(req.body.icono == ''){
+            req.body.icono = 'fas fa-question';
+        }
         if (req.body.titulo != '' && req.body.descripcion != ''){
                         
             await serviciosModel.insertServicios(req.body);
