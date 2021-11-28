@@ -14,6 +14,7 @@ router.get('/', async function(req, res, next){
     let imagenes = await imagenesModel.getImagenes();
 
     res.render('admin/imagenes',{
+                title: 'Administración de Cabañas Ariel',
                 login: Boolean(req.session.user),
                 usuario: req.session.user,
                 layout: 'admin/layout',
@@ -23,6 +24,7 @@ router.get('/', async function(req, res, next){
 
 router.get('/agregar',(req, res, next) => {
     res.render('admin/agregarImg',{
+        title: 'Administración de Cabañas Ariel',
         layout:'admin/layout',
         login: Boolean(req.session.user),
         usuario: req.session.user
@@ -50,6 +52,7 @@ router.get('/modificar/:id', async(req, res, next) => {
     });
         
     res.render('admin/modificarImg',{
+        title: 'Administración de Cabañas Ariel',
         layout:'admin/layout',
         login: Boolean(req.session.user),
         usuario: req.session.user,
@@ -75,6 +78,7 @@ router.post('/agregar', async (req, res, next) => {
 
         } else {
             res.render('admin/agregarImg', {
+                title: 'Administración de Cabañas Ariel',
                 layout:'admin/layout',
                 login: Boolean(req.session.user),
                 usuario: req.session.user,
@@ -115,6 +119,7 @@ router.post('/modificar', async (req, res, next) => {
     } catch (e){
         console.log(e);
         res.render('admin/modificarImg',{
+            title: 'Administración de Cabañas Ariel',
             layout:'admin/layout',
             login: Boolean(req.session.user),
             usuario: req.session.user,

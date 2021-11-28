@@ -3,7 +3,9 @@ let router = express.Router();
 let loginModel = require('../models/loginModel');
 
 router.get('/', function(req, res, next) {
-  res.render('login');
+  res.render('login',{
+    title: 'Ingreso a Cabañas Ariel'
+  });
 });
 
 router.post('/', async (req, res,next) => {

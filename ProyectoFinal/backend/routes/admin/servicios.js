@@ -6,6 +6,7 @@ router.get('/', async function(req, res, next){
     let servicios = await serviciosModel.getServicios();
 
     res.render('admin/servicios',{
+                title: 'Administración de Cabañas Ariel',
                 login: Boolean(req.session.user),
                 usuario: req.session.user,
                 layout: 'admin/layout',
@@ -15,6 +16,7 @@ router.get('/', async function(req, res, next){
 
 router.get('/agregar',(req, res, next) => {
     res.render('admin/agregarServ',{
+        title: 'Administración de Cabañas Ariel',
         layout:'admin/layout',
         login: Boolean(req.session.user),
         usuario: req.session.user
@@ -32,6 +34,7 @@ router.get('/modificar/:id', async(req, res, next) => {
     let servicio = await serviciosModel.getServicioById(id);
     
     res.render('admin/modificarServ',{
+        title: 'Administración de Cabañas Ariel',
         layout:'admin/layout',
         login: Boolean(req.session.user),
         usuario: req.session.user,
@@ -51,6 +54,7 @@ router.post('/agregar', async (req, res, next) => {
 
         } else {
             res.render('admin/agregarServ', {
+                title: 'Administración de Cabañas Ariel',
                 layout:'admin/layout',
                 login: Boolean(req.session.user),
                 usuario: req.session.user,
@@ -61,6 +65,7 @@ router.post('/agregar', async (req, res, next) => {
     }catch (e){
         console.log(e);
         res.render('admin/agregarServ', {
+            title: 'Administración de Cabañas Ariel',
             layout:'admin/layout',
             login: Boolean(req.session.user),
             usuario: req.session.user,
@@ -82,6 +87,7 @@ router.post('/modificar', async (req, res, next) => {
     } catch (e){
         console.log(e);
         res.render('admin/modificarServ',{
+            title: 'Administración de Cabañas Ariel',
             layout:'admin/layout',
             login: Boolean(req.session.user),
             usuario: req.session.user,
