@@ -1,6 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
+import axios from 'axios';
 
 export const Contacto = () => {
+
+    const initialForm = {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    }
+    const [sending, setSending] = useState(false);
+    const [msg, setMsg] = useState('');
+    const [formData, setFormData] = useState(initialForm);
+
+    const handleChange = e => {
+        const {name, value} = e.target;
+        setFormData(oldData =>({
+            ...oldData,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async e => {
+        e.preventDefault();
+        setMsg('');
+        setSending(true);
+        const response = await axios.post('http://localhost:3100/api/contacto', formData);
+        setSending(false);
+        setMsg(response.data.message);
+        if(response.data.error === false){
+            setFormData(initialForm);
+        }
+    }
+
     return (
         <div className="contenido">
             <div className="section-title">
@@ -15,21 +47,24 @@ export const Contacto = () => {
                 </div> */}
 
                 <div className="col-lg-6 ">
-                    <form className="formulario">
+                    <form className="formulario" onSubmit={handleSubmit}>
                         <div className="row">
                             <div className="col-md-6 form-group">
-                                <input type="text" name="name" id="name" className="form-control"  placeholder="Nombre" required></input>
+                                <input type="text" name="name" id="name" className="form-control"  placeholder="Nombre" value = {formData.name} onChange={handleChange} required></input>
                             </div>
                             <div className="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="email"  name="email" id="email" className="form-control" placeholder="Correo electrónico" required></input>
+                                <input type="email"  name="email" id="email" className="form-control" placeholder="Correo electrónico" value = {formData.email} onChange={handleChange} required></input>
                             </div>
                         </div>
                         <div className="form-group mt-3">
-                            <input type="text" name="subject" id="subject" className="form-control" placeholder="Asunto" required></input>
+                            <input type="text" name="subject" id="subject" className="form-control" placeholder="Asunto"  value = {formData.subject} onChange={handleChange} required></input>
                         </div>
                         <div className="form-group mt-3">
-                            <textarea name="message" id="message" className="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                            <textarea name="message" id="message" className="form-control" value = {formData.message} onChange={handleChange} rows="5" placeholder="Mensaje" required></textarea>
                         </div>
+                        { sending ? <p>Enviando...</p> : null }
+                        { msg ? <p>{ msg }</p> : null }
+
                         <div className="text-center my-6">
                             <button className="envio-msj" type="submit">Enviar</button>
                         </div>
