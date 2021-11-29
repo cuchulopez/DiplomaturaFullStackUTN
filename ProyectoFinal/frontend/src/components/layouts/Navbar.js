@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 export const Navbar = () => {
   return (
     <header id="header" className = "header" >
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar  navbar-expand-lg navbar-light bg-light" fixed="top">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           Cabañas Ariel
