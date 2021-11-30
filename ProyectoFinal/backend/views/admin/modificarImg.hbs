@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-6 offset-3">
             <h4>Modificar Imagen</h4>
-            <form method="POST" action="/admin/imagenes/modificar" enctype="multipart/form-data">
+            <form method="POST" action="/admin/imagenes/modificar" enctype="multipart/form-data" class="formulario">
                 <input type="hidden" value="{{imagen.id}}" name='id'>
                 <div class="form-group">
                     <textarea placeholder="Descripcion" class="form-control" name="descripcion" required>{{imagen.descripcion}}</textarea>
@@ -15,6 +15,7 @@
                 <button type="submit" class="btn btn-primary">Modificar</button>
                 <a href='/admin/imagenes' title="Cancelar" class="btn btn-danger">Cancelar</a>
             </form>
+            
         </div>
         {{#if error}}
             <h5>{{message}}</h5>

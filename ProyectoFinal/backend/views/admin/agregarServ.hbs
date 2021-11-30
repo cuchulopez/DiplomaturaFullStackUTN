@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-6 offset-3">
             <h4>Agregar un servicio</h4>
-            <form action="/admin/servicios/agregar" method="post">
+            <form class="formulario" action="/admin/servicios/agregar" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Titulo" name="titulo" required>
                 </div>
@@ -12,7 +12,7 @@
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Icono (ej: fas fa-biking)" name="icono">
                 </div>
-                <button type="submit" class="btn btn-primary"> Agregar </button>
+                <button type="submit" class="btn btn-primary agregar"> Agregar </button>
                 <a href='/admin/servicios' title="Cancelar" class="btn btn-danger">Cancelar</a>
             </form>
 
